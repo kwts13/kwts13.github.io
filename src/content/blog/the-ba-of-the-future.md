@@ -3,7 +3,6 @@ title: The BA of the Future
 description: How business analysis changes over the next three to five years, now that AI can do some of our homework.
 date: 2026-10-06
 tags: [business analysis, AI]
-draft: true
 ---
 
 Every few years someone announces that business analysts are finished. Low-code was going to do it. Then self-service BI. Now it's AI. I've heard enough of these to be suspicious, but this time part of the claim holds up, so it's worth being specific about which part.
