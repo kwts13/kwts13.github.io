@@ -49,7 +49,7 @@ export const site = {
     },
     {
       role: 'Sales Representative',
-      company: 'TGW Pty. Ltd.',
+      company: 'Retail Gaming',
       period: 'Nov 2009 \u2014 Dec 2011',
       summary: 'Retail sales, before and alongside the cadetship.',
       tags: ['Sales'],
