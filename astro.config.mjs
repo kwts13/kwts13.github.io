@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  // Published to GitHub Pages at the root of kwts13.github.io (used for RSS + sitemap).
+  // Published to GitHub Pages at the root of kwts13.github.io (used for the sitemap).
   site: 'https://kwts13.github.io',
   integrations: [sitemap()],
   devToolbar: { enabled: false },
