@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<Base title="About" description="About me and my experience.">
+  <p class="eyebrow">About</p>
+  <h1>A bit about me.</h1>
+  {site.about.map((p) => <p class="copy">{p}</p>)}
+
+  <div class="section-head" style="margin-top:80px"><h2>Experience</h2></div>
+  <div class="timeline">
+    {site.experience.map((j, i) => (
+      <div class="job">
+        <span class="num">{pad(i + 1)}</span>
+        <div>
+          <h3>{j.role}</h3>
+          <p class="company">{j.company}</p>
+          <p class="period">{j.period}</p>
+        </div>
+        <div>
+          <p>{j.summary}</p>
+          <div class="tags">{j.tags.map((t) => <span class="tag">{t}</span>)}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</Base>

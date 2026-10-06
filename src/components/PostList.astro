@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props { posts: CollectionEntry<'blog'>[]; total?: number; }
+const { posts, total = posts.length } = Astro.props;
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+{posts.length === 0 ? (
+  <p class="empty">No posts yet — check back soon.</p>
+) : (
+  <ol class="index">
+    {posts.map((p, i) => (
+      <li>
+        <a href={`/blog/${p.id}`}>
+          <span class="num">{pad(total - i)}</span>
+          <span>
+            <span class="title">{p.data.title}</span>
+            <p class="desc">{p.data.description}</p>
+          </span>
+          <time class="date" datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+        </a>
+      </li>
+    ))}
+  </ol>
+)}
