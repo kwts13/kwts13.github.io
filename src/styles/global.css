@@ -171,7 +171,9 @@ h3 { font-size: 26px; }
 .prose { max-width: 40em; font-family: var(--serif); font-size: 20px; line-height: 1.7; }
 .prose h2 { font-size: 34px; margin: 2em 0 .6em; }
 .prose p, .prose ul, .prose ol { margin: 0 0 1.3em; }
-.prose img { max-width: 100%; }
+.prose img { display: block; width: auto; max-width: 100%; height: auto; max-height: 80vh; margin: 2em 0 .6em; }
+/* An italic line straight after an image acts as its caption */
+.prose p:has(> img:only-child) + p > em:only-child { display: block; margin-bottom: 2em; font-family: var(--mono); font-style: normal; font-size: 13px; line-height: 1.5; color: var(--muted); }
 .prose blockquote { margin: 1.6em 0; padding-left: 22px; border-left: 3px solid var(--accent); font-style: italic; }
 .prose code { font-family: var(--mono); font-size: .75em; background: var(--accent-soft); padding: 2px 6px; }
 .prose pre { background: var(--code-bg); padding: 20px; overflow-x: auto; font-size: 14px; line-height: 1.6; border: 1px solid var(--hair); }
