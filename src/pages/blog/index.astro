@@ -10,7 +10,6 @@ const posts = (await getCollection('blog', (p) => !p.data.draft))
   <p class="eyebrow">Blog</p>
   <h1>Notes &amp; updates.</h1>
   <p class="copy">Trends at work, business analysis, product, AI and the odd side project. Written as I go.</p>
-  <p class="copy"><a href="/rss.xml">Subscribe via RSS</a>.</p>
-  <hr class="rule" style="margin-top:32px;margin-bottom:0" />
+  <hr class="rule" style="margin-bottom:0" />
   <PostList posts={posts} />
 </Base>
