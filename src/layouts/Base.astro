@@ -5,7 +5,7 @@ import { site } from '../site';
 
 interface Props { title?: string; description?: string; }
 const { title, description = site.description } = Astro.props;
-const fullTitle = title ? `${title} · ${site.name}` : site.title;
+const fullTitle = title ? `${title} - ${site.brand}` : site.brand;
 const path = Astro.url.pathname;
 const nav = [
   { href: '/about', label: 'About' },
