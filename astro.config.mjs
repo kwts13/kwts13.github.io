@@ -6,5 +6,7 @@ export default defineConfig({
   site: 'https://kwts13.github.io',
   integrations: [sitemap()],
   devToolbar: { enabled: false },
+  // Inline the (small) stylesheet so a cached page can never point at a CSS file that no longer exists.
+  build: { inlineStylesheets: 'always' },
   markdown: { shikiConfig: { themes: { light: 'github-light', dark: 'github-dark-dimmed' }, defaultColor: false } },
 });
