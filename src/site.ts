@@ -2,7 +2,7 @@
 export const site = {
   name: 'Kerrod',
   fullName: 'Kerrod Standring',
-  title: 'Kerrod — Personal Site',
+  brand: 'kwts.',
   tagline: 'And I\u2019m a Business Analyst, for better or for worse.',
   description: 'Kerrod Standring is a Business Analyst in Sydney. About, experience, contact, and a blog on BA, product, AI and side projects.',
   location: 'Sydney, Australia',
